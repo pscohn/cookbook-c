@@ -27,6 +27,13 @@ void test_swap()
     assert(test_util_numbers[1] == 43);
 }
 
+int test_check_arr_equal()
+{
+    int test_util_numbers[5] = {43, 2, 76, 954, 7};
+    int compare[5] = {43, 2, 76, 954, 7};
+    assert(check_arr_equal(test_util_numbers, compare, 5));
+}
+
 void test_util()
 {
     test_min();    
@@ -34,5 +41,7 @@ void test_util()
     test_max();
     printf(".");
     test_swap();
+    printf(".");
+    test_check_arr_equal();
     printf(".");
 }
