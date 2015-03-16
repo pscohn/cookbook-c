@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+
+#include "util.h"
+
+
+void test_min()
+{
+    int test_util_numbers[5] = {43, 2, 76, 954, 7};
+    int min_index = min(test_util_numbers, 5);
+    assert(min_index == 1);
+}
+
+void test_max()
+{
+    int test_util_numbers[5] = {43, 2, 76, 954, 7};
+    int max_index = max(test_util_numbers, 5);
+    assert(max_index == 3);
+}
+
+void test_swap()
+{
+    int test_util_numbers[5] = {43, 2, 76, 954, 7};
+    swap(test_util_numbers, 0, 1);
+    assert(test_util_numbers[0] == 2);
+    assert(test_util_numbers[1] == 43);
+}
+
+void test_util()
+{
+    test_min();    
+    test_max();
+    test_swap();
+}
