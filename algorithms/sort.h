@@ -16,14 +16,12 @@ void selection_sort(int* numbers, int n)
 
 void insertion_sort(int* numbers, int n)
 {
-    int i = 1;
-    int j = 0;
-    while (i < n) {
+    int i, j;
+    for (i=1; i<n; i++) {
         j = i;
         while (j >= 0 && numbers[j] < numbers[j-1]) {
             swap(numbers, j, j-1);
             j--;
         }
-        i++;
     }
 }
