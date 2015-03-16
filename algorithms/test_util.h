@@ -30,6 +30,9 @@ void test_swap()
 void test_util()
 {
     test_min();    
+    printf(".");
     test_max();
+    printf(".");
     test_swap();
+    printf(".");
 }

@@ -17,6 +17,6 @@ int main(int argc, char **argv)
 
     test_util();
     test_sort();
-    printf("all good\n");
+    printf("pass\n");
     return 0;
 }
