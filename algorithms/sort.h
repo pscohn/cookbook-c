@@ -14,14 +14,29 @@ void selection_sort(int* numbers, int n)
     }
 }
 
-void insertion_sort(int* numbers, int n)
+void insertion_sort(int* numbers, int n, int h)
 {
     int i, j;
-    for (i=1; i<n; i++) {
+    for (i=0; i<n; i++) {
         j = i;
-        while (j >= 0 && numbers[j] < numbers[j-1]) {
-            swap(numbers, j, j-1);
-            j--;
+        while (j >= 0 && numbers[j] < numbers[j-h]) {
+            swap(numbers, j, j-h);
+            j -= h;
         }
+    }
+}
+
+void shell_sort(int* numbers, int n)
+{
+
+    int distance = 0;
+    while ((3 * distance + 1) <= n) {
+        distance = 3 * distance + 1;
+    }
+
+    int i;
+    while (distance > 0) {
+        insertion_sort(numbers, n, distance);
+        distance = (distance - 1) / 3;
     }
 }
