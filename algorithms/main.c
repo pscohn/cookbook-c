@@ -5,6 +5,7 @@
 #include "data_structures.h"
 #include "test_sort.h"
 #include "test_util.h"
+#include "test_union.h"
 
 int main(int argc, char **argv)
 {
@@ -17,6 +18,7 @@ int main(int argc, char **argv)
 
     test_util();
     test_sort();
+    test_union();
     printf("pass\n");
     return 0;
 }
