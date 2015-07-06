@@ -12,3 +12,12 @@ void union_join(int* numbers, int len, int p, int q)
         }
     }
 }
+
+int union_find(int* numbers, int p, int q)
+{
+    if (numbers[p] == numbers[q]) {
+        return 1;
+    }
+
+    return 0;
+}
