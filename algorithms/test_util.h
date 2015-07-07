@@ -36,6 +36,7 @@ int test_check_arr_equal()
 
 void test_util()
 {
+    printf("test_util");
     test_min();    
     printf(".");
     test_max();
@@ -44,4 +45,5 @@ void test_util()
     printf(".");
     test_check_arr_equal();
     printf(".");
+    printf("pass\n");
 }

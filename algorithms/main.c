@@ -19,6 +19,5 @@ int main(int argc, char **argv)
     test_util();
     test_sort();
     test_union();
-    printf("pass\n");
     return 0;
 }

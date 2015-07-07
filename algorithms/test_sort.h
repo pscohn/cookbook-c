@@ -32,10 +32,12 @@ void test_shell_sort()
 
 void test_sort()
 {
+    printf("test_sort");
     test_selection_sort();
     printf(".");
     test_insertion_sort();
     printf(".");
 //    test_shell_sort();
 //    printf(".");
+    printf("pass\n");
 }

@@ -1,6 +1,31 @@
 #include <stdlib.h>
 
 /*
+ * Quick Union Implementation
+ */
+
+void qu_union(int *numbers, int p, int q)
+{
+    int rootp = qu_root(numbers, p);
+    int rootq = qu_root(numbers, q);
+    numbers[rootp] = rootq;
+}
+
+int qu_root(int *numbers, int p)
+{
+    int i = p;
+    while (numbers[i] != i) {
+        i = numbers[i];
+    }
+    return i;
+}
+
+int qu_find(int *numbers, int p, int q)
+{
+    return qu_root(numbers, p) == qu_root(numbers, q);
+}
+
+/*
  * Quickfind Implementation
  */
 

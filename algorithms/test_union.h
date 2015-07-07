@@ -29,8 +29,20 @@ void test_quickfind()
     assert(quickfind_find(&numbers[0], 7, 8));
 }
 
+void test_quickunion()
+{
+    int numbers[] = {0, 1, 2, 8, 3, 5, 6, 7, 8, 9};
+    assert(qu_find(numbers, 3, 4));
+    qu_union(numbers, 1, 3);
+    assert(qu_find(numbers, 1, 4));
+}
+
 void test_union()
 {
+    printf("test_union");
     test_quickfind();
     printf(".");
+    test_quickunion();
+    printf(".");
+    printf("pass\n");
 }
