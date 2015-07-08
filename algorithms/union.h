@@ -39,8 +39,8 @@ void weighted_union(int *numbers, int *height, int p, int q)
     } else {
         numbers[rootq] = rootp;
     }
-    height[rootp] = height[rootp] + height[rootq];
-    height[rootq] = height[rootp] + height[rootq];
+    height[rootp] += height[rootq];
+    height[rootq] += height[rootp];
 
 }
 

@@ -47,6 +47,9 @@ void test_weightedunion()
     assert(qu_find(numbers, 3, 7));
     weighted_union(numbers, height, 7, 8);
     assert(!qu_find(numbers, 2, 3));
+    int correctheight[] = {1, 1, 1, 4, 1, 4, 1, 4, 4, 1};
+    assert(check_arr_equal(height, correctheight, 10));
+    
     
 }
 
