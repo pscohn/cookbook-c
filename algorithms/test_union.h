@@ -37,12 +37,27 @@ void test_quickunion()
     assert(qu_find(numbers, 1, 4));
 }
 
+void test_weightedunion()
+{
+    int numbers[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int height[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    weighted_union(numbers, height, 3, 5);
+    assert(qu_find(numbers, 3, 5));
+    weighted_union(numbers, height, 3, 7);
+    assert(qu_find(numbers, 3, 7));
+    weighted_union(numbers, height, 7, 8);
+    assert(!qu_find(numbers, 2, 3));
+    
+}
+
 void test_union()
 {
     printf("test_union");
     test_quickfind();
     printf(".");
     test_quickunion();
+    printf(".");
+    test_weightedunion();
     printf(".");
     printf("pass\n");
 }

@@ -26,6 +26,36 @@ int qu_find(int *numbers, int p, int q)
 }
 
 /*
+ * Weighted Quick Union
+ */
+
+int weighted_root(int *numbers, int i, int *height)
+{
+    int h = 1;
+    while (numbers[i] != i) {
+        i = numbers[i];
+        h++;
+    }
+    *height = h;
+    return i;
+}
+
+void weighted_union(int *numbers, int *height, int p, int q)
+{
+    int h1, h2, rootp, rootq;
+    rootp = weighted_root(numbers, p, &h1);
+    rootq = weighted_root(numbers, q, &h2);
+    if (h1 < h2) {
+        numbers[rootp] = rootq;
+    } else {
+        numbers[rootq] = rootp;
+    }
+    height[rootp] = h1 + h2;
+    height[rootq] = h1 + h2;
+
+}
+
+/*
  * Quickfind Implementation
  */
 
