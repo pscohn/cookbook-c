@@ -43,11 +43,15 @@ void test_weightedunion()
     int height[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     weighted_union(numbers, height, 3, 5);
     assert(qu_find(numbers, 3, 5));
+    assert(check_arr_equal(height, (int[]){1, 1, 1, 2, 1, 1, 1, 1, 1, 1}, 10));
+
     weighted_union(numbers, height, 3, 7);
     assert(qu_find(numbers, 3, 7));
+    assert(check_arr_equal(height, (int[]){1, 1, 1, 3, 1, 1, 1, 1, 1, 1}, 10));
+
     weighted_union(numbers, height, 7, 8);
     assert(!qu_find(numbers, 2, 3));
-    int correctheight[] = {1, 1, 1, 4, 1, 4, 1, 4, 4, 1};
+    int correctheight[] = {1, 1, 1, 4, 1, 1, 1, 1, 1, 1};
     assert(check_arr_equal(height, correctheight, 10));
     
     

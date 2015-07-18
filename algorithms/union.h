@@ -34,14 +34,16 @@ void weighted_union(int *numbers, int *height, int p, int q)
     int rootp, rootq;
     rootp = qu_root(numbers, p);
     rootq = qu_root(numbers, q);
+    if (rootp == rootq) {
+        return;
+    }
     if (height[rootp] < height[rootq]) {
         numbers[rootp] = rootq;
+        height[rootq] += height[rootp];
     } else {
         numbers[rootq] = rootp;
+        height[rootp] += height[rootq];
     }
-    height[rootp] += height[rootq];
-    height[rootq] += height[rootp];
-
 }
 
 /*
