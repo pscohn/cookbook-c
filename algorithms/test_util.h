@@ -27,7 +27,7 @@ void test_swap()
     assert(test_util_numbers[1] == 43);
 }
 
-int test_check_arr_equal()
+void test_check_arr_equal()
 {
     int test_util_numbers[5] = {43, 2, 76, 954, 7};
     int compare[5] = {43, 2, 76, 954, 7};

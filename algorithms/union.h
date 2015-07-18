@@ -4,13 +4,6 @@
  * Quick Union Implementation
  */
 
-void qu_union(int *numbers, int p, int q)
-{
-    int rootp = qu_root(numbers, p);
-    int rootq = qu_root(numbers, q);
-    numbers[rootp] = rootq;
-}
-
 int qu_root(int *numbers, int p)
 {
     int i = p;
@@ -18,6 +11,13 @@ int qu_root(int *numbers, int p)
         i = numbers[i];
     }
     return i;
+}
+
+void qu_union(int *numbers, int p, int q)
+{
+    int rootp = qu_root(numbers, p);
+    int rootq = qu_root(numbers, q);
+    numbers[rootp] = rootq;
 }
 
 int qu_find(int *numbers, int p, int q)
