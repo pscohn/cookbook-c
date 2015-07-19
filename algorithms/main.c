@@ -11,7 +11,7 @@
 int main(int argc, char **argv)
 {
     test_util();
-    test_sort();
+   // test_sort();
     test_union();
     test_ds();
     return 0;
