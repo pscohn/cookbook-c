@@ -6,12 +6,12 @@
 
 void test_node()
 {
-    struct Node n = {"Hello", NULL};
+    Node n = {"Hello", NULL};
     assert(n.item == "Hello");
     n.item = "Goodbye";
     assert(n.item == "Goodbye");
     
-    struct Node m = {"Hello", &n};
+    Node m = {"Hello", &n};
     assert(m.item == "Hello");
     assert(m.next->item == "Goodbye");
 }

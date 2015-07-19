@@ -6,9 +6,9 @@
 
 struct Node;
 
-struct Node {
+typedef struct Node {
     char *item;
     struct Node *next;
-};
+} Node;
 
 #endif
