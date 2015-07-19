@@ -1,16 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct Node {
-    char *data;
-    struct Node *next;
-};
+#ifndef _DATASTRUCTURESH_
+#define _DATASTRUCTURESH_ 
 
-struct StackLinked {
-    char *first;
-};
 
-int stack_size(char *stack) {
-    int count = 0;
-    return count;
-}
+#endif

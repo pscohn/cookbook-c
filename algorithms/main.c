@@ -6,18 +6,13 @@
 #include "test_sort.h"
 #include "test_util.h"
 #include "test_union.h"
+#include "test_ds.h"
 
 int main(int argc, char **argv)
 {
-    struct Node a;
-    a.data = "Hello There"; 
-
-    struct Node n;
-    n.data = "There";
-    n.next = &a;
-
     test_util();
     test_sort();
     test_union();
+    test_ds();
     return 0;
 }
